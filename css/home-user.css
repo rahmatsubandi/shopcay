@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+} 
+
+
+/* Navbar */
+
+/* Logo */
+.wrapper{
+    height: 100vh;
+    background-color: rgb(243, 241, 239);
+    margin-top: -19px;
+    
+}
+
+.top-bar{
+    width: 80%;
+    height: 50px;
+    margin: 20px auto;
+}
+
+.logo{
+    width: 20%;
+    float: left;
+}
+
+.logo img{
+    width: 150px;
+    margin: 8px auto;
+    cursor: pointer;
+}
+
+/* Logo End */
+
+/* Navbar Menu */
+
+.menu-bar{
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+
+.menu-bar ul li{
+    display: inline-block;
+    list-style: none;
+    color: #000;
+    margin: 15px 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.menu-bar a{
+    color: #000;
+    padding-top: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar,.menu-bar ul li:hover{
+    border-bottom: 2px solid #12A613;
+}
+
+/* End Navbar Menu */
+
+/* Text Perkenalan */
+
+.hero{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-text{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.hero-text h1{
+    margin: 100px 0 50px 70px;
+    line-height: 40px;
+}
+
+.hero-text h1::after{
+    content: '';
+    width: 109px;
+    height: 2px;
+    background: #12A613;
+    top: 28%;
+    left: 31.8%;
+    position: absolute;
+}
+
+.hero-text p{
+    padding-left: 70px;
+    line-height: 25px;
+}
+
+.btn-rounded {
+    display: table;
+    margin: 35px 72px 0 72px;
+    padding: 0.7rem;
+    background-color: #12A613;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: -2px -3px 8px 2px rgb(52, 209, 52);
+}
+
+.btn-rounded:hover{
+    background-color: rgb(39, 207, 39);
+    box-shadow: -2px -3px 8px 2px rgb(101, 253, 101);
+}
+
+/* End Text Perkenalan */
+
+/* Gambar Perkenalan */
+
+.hero-banner{
+    width: 45%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+
+.hero-banner img{
+    width: 90%;
+    margin: -5px auto;
+}
+
+/* End Gambar Perkenalan */
+
+/* Navbar tombol logout */
+
+.logout{
+    width: 200px;
+    height: 200px;
+    right: 0;
+    top: -40px;
+    position: absolute;
+    background-image: linear-gradient(rgb(91, 255, 91),rgb(167, 255, 167));
+    border-radius: 0 0 60px 2500px;
+}
+
+.logout .btn {
+    font-size: 15px;
+    display: table;
+    width: 50px;
+    margin: 75px 0 0 80px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.7rem;
+    background-color: rgb(21, 187, 21);
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    box-shadow: 0 0 18px 4px rgb(30, 114, 30);
+}
+
+.logout .btn:hover{
+    background-color: rgb(39, 207, 39);
+    box-shadow: 0 0 18px 4px rgb(43, 161, 43);
+}
+
+/* End Navbar tombol logout */
+
+/* End Navbar */
+
+/*Card*/
+
+.text-title-produk{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-style: i;
+}
+.deks{
+    text-align: left;
+    margin-left: 35px;
+    font-size: 17px;
+    color: rgb(189, 189, 189);
+}
+
+.bagian-card {
+    margin-top: 20px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    }
+    
+    .card1{
+    display: block; /* Fungsinya untuk menentukan suatu elemen. Sedangkan blok akan memblok 1 baris full */
+    position: relative; /*Mengatur posisi elemen berhubungan dengan divnya*/
+    max-width: 262px; /*Maksial Lebarnya 262px 'tergantung kebutuhan' */
+    background-color: #ffffff;
+    border-radius: 4px; /*Mmebuat lengkungan pada border dengan lengkung yg ditentukan*/
+    padding: 32px 24px; /*Memberi jarak pada konten elemen yg berada didalam*/
+    margin: 12px; /*Memberi jarak antar elemen atau tag*/
+    text-decoration: none; /*Teks dekorasi atau biasanya saat membuat link didalam elemen. jika ingin menghilangkan mengguanakan :none*/
+    color: rgb(49, 49, 49); /*Warna*/
+    z-index: 0; /*Memberi tumpukan pada elemen. semakin besar % atau px maka tampilan terdepan*/
+    overflow: hidden; /*Fungsi dari overflow sendiri ialah untuk menyembunyikan, menampakkan, atau membuat scroll.*/
+    box-shadow: 0 3px 10px 0 rgba(75, 75, 75, 0.2); /*bayangan*/
+}
+
+.card1:hover{
+    /* Saat mouse disorot */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.deskripsi{
+    /* Tmbah padding */
+    padding: 20px;
+}
+/*End Card*/
+
+/*Footer*/
+
+.footer{
+margin-top: 25%;
+background-color: rgb(49, 145, 49);
+height: 15vw;
+display: block;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+.inner_footer{
+display: block;
+margin: 0 auto;
+width: 1100px;
+height: 100%;
+}
+
+.inner_footer .logo_footer{
+width: 35%;
+float: left;
+height: 100%;
+display: block;
+}
+
+.inner_footer .logo_footer img{
+width: 70px;
+height: auto;
+margin-top: 60px;
+margin-left: 25%;
+}
+
+.inner_footer .footer_third{
+width: 24%;
+margin-right: -50px;
+float: left;
+height: 100%;
+}
+
+.inner_footer .footer_third:last-child{
+margin-right: 0;
+}
+
+.inner_footer .footer_third h1{
+font-size: 20px;
+color: white;
+display: block;
+width: 100%;
+margin-bottom: 15px;
+margin-top: 60px;
+margin-left: -55%;
+}
+
+.inner_footer .footer_third a{
+font-size: 15px;
+color: white;
+display: block;
+width: 100%;
+padding-bottom: 15px;
+text-decoration: none;
+margin-left: -55%;
+}
+
+.inner_footer .footer_third span{
+color: white;
+font-size: 14px;
+font-weight: 200;
+display: block;
+width: 100%;
+margin-left: -55%;
+}
+
+/*End Footer*/
