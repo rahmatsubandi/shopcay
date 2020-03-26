@@ -10,8 +10,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopCay</title>
-    <link rel="shortcut icon" href="img/iconweb.png">
-    <link rel="stylesheet" href="css/home-user.css">
+    <link rel="shortcut icon" href="../img/iconweb.png">
+    <link rel="stylesheet" href="../css/home-user.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 
 </head>
@@ -21,7 +21,7 @@ session_start();
     <div class="wrapper">
         <div class="top-bar">
             <div class="logo">
-                <a href="home-user.php"><img src="img/navbar.svg"></a>
+                <a href="home-user.php"><img src="../img/navbar.svg"></a>
             </div>
             <div class="menu-bar">
                 <ul>
@@ -42,10 +42,10 @@ session_start();
                 <a class="btn-rounded"> Hallo, <?php echo $_SESSION['username']; ?></a>
             </div>
             <div class="hero-banner">
-                <img src="img/user-home.svg">
+                <img src="../img/user-home.svg">
             </div>
         </div>
-        <div class="logout"><a class="btn" href="logout.php">Logout!</a></div>
+        <div class="logout"><a class="btn" href="../logout.php">Logout!</a></div>
     </div>
     </div>
     <!-- End Navbar -->
@@ -54,43 +54,43 @@ session_start();
     <div id="produk" class="text-title-produk">Produk</div>
     <div class="deks">Beberapa style menarik yang wajib kamu miliki!</div><br>
     <div class="bagian-card">
-        <a class="card1" href="#">
-            <img src="img/girl.jfif" width="230px" height="225px">
+        <a class="card1">
+            <img src="../img/girl.jfif" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Ughtea</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
-            <img src="img/ikwan.png" width="230px" height="225px">
+        <a class="card1">
+            <img src="../img/ikwan.png" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Ikwhan</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
-            <img src="img/boy.jpg" width="230px" height="225px">
+        <a class="card1">
+            <img src="../img/boy.jpg" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Selebgram Pria</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
-            <img src="img/selebgram.jfif" width="230px" height="225px">
+        <a class="card1">
+            <img src="../img/selebgram.jfif" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Selebgram Wanita</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
-            <img src="img/santai wanita.jpg" width="230px" height="225px">
+        <a class="card1">
+            <img src="../img/santai wanita.jpg" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Santai Wanita</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
-            <img src="img/santai pria.jpg" width="230px" height="225px">
+        <a class="card1">
+            <img src="../img/santai pria.jpg" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Santai Pria</b></h4>
                 <p>Banyak Pilihan Lainya</p>
@@ -103,7 +103,7 @@ session_start();
     <div id="footer" class="footer">
         <div class="inner_footer">
             <div class="logo_footer">
-                <img src="img/iconweb.png" alt=""> </div>
+                <img src="../img/iconweb.png" alt=""> </div>
             <div class="footer_third">
                 <h1>Informasi</h1>
                 <a href="home-user.php">&copy; ShopyCay 2020.</a>
@@ -111,7 +111,7 @@ session_start();
             </div>
             <div class="footer_third">
                 <h1>Kontak</h1>
-                <a href="#">+62 8778 8711 327</a>
+                <a>+62 8778 8711 327</a>
             </div>
             <div class="footer_third">
                 <h1>Alamat</h1>

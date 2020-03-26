@@ -10,13 +10,20 @@ if (isset($_POST['regis'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
     $password2 = mysqli_real_escape_string($db, $_POST['password2']);
 
-    if ($password == $password2) {
-        //membuat user
-        $password = md5($password); //men-hash pw agar aman
-        $sql = "INSERT INTO user(username, email, password) VALUES('$username', '$email', '$password')";
-        mysqli_query($db, $sql);
-        $_SESSION['username'] = $username;
-        echo "<script>alert('$username kamu belum di Verifikasi nih oleh ShopCay :) Tunggu yah..');document.location.href='login.php'</script>/n";
+    if ($username == '' || $email == '' || $password == '' || $password2 == '') { //mengecek apakah ada bidang kosong
+        echo "<script>alert('Tidak boleh kosong!')</script>"; //jika kosong muncul alert
+    } elseif ($password !== $password2) { //jika password dan re-typed password tidak sama
+        echo "<script>alert('Password tidak sama!')</script>"; //maka muncul alert
+    } else {
+        if ($password == $password2) { //jika password dan re-typed password sama
+            //membuat user
+            //$password = md5($password); //tapi untuk memudahkan admin dalam verifikasi maka, password tidak di enkripsi. enkripsi password saat data di edit oleh admin.
+            $sql = "INSERT INTO user(username, email, password) VALUES('$username', '$email', '$password')"; //input ke db
+            mysqli_query($db, $sql); //dengan query
+            $_SESSION['username'] = $username; //dan session
+            //jika proses sudah benar maka akan muncul alert, dan berpindah kepage login untuk menunggu verifikasi dari admin
+            echo "<script>alert('$username kamu belum di Verifikasi nih oleh ShopCay :) Tunggu yah..');document.location.href='login.php'</script>/n";
+        }
     }
 }
 ?>

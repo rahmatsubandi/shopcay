@@ -10,9 +10,13 @@ if (isset($_POST['tambah'])) {
     if ($password == $password2) {
         //membuat user
         $password = md5($password); //men-hash pw agar aman
-        $sql = "INSERT INTO user(username, email, password, level) VALUES('$username', '$email', '$password', '$level')";
-        mysqli_query($db, $sql);
-        header("location: dashboard.php?halaman=data"); //pindah ke home
+        $sql = $db->query("INSERT INTO user(username, email, password, level) VALUES('$username', '$email', '$password', '$level')");
+        if ($sql) {
+            echo "<script>alert('Kamu berhasil menambahkan data')</script>";
+            echo "<script>location='dashboard.php?halaman=data'</script>";
+        } else {
+            echo "<script>alert('Kamu gagal menambahkan data')</script>";
+        }
     }
 }
 ?>

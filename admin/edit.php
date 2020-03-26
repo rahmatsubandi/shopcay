@@ -6,33 +6,34 @@ $pecah = $ambil->fetch_assoc();
 if (isset($_POST['edit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password']; //pw lama
-    $password2 = $_POST['password2']; //pw baru
-    $password3 = $_POST['password3']; //konfirmasi pw baru
+    $password = $_POST['password']; //password lama
+    $password2 = $_POST['password2']; //password baru
+    $password3 = $_POST['password3']; //konfirmasi password baru
     $level = $_POST['level'];
     $id =  $_GET['id'];
     if (mysqli_num_rows($ambil) == 0) {
     } else {
         $cek = mysqli_fetch_array($ambil);
     }
-    //mengecek variabel salah apabila pw kosong dan tidak sama
-    if ($password == '' || $password2 == '' || $password3 == '') {
+    //mengecek variabel apabila pw kosong dan tidak sama
+    if ($password == '' || $password2 == '' || $password3 == '') { //jika dalam form password kosong
         echo "<script>alert('Bidang Password tidak boleh kosong!');</script>";
-    } elseif ($password2 !== $password3) {
+    } elseif ($password2 !== $password3) { //jika password tidak sama
         echo "<script>alert('Password tidak sama!');</script>";
     } else {
         //untuk mengambil dan mengubah data yang ada di db
-        $password = md5($password); //mengenkripsi password lama
+        //$password = md5($password); //fungsi ini untuk mengenkripsi password.
+        //tapi berhubung saat user regis, password tidak terenkripsi. kerana untuk mempermudah admin edit data buat verifikasi level.
         $password2 = md5($password2); //mengenkrispi password baru
         if ($pecah['password'] == $password) { //jika password tidak sama dengan variabel password makan akan muncul alert
             $update = $db->query("UPDATE user SET username='$username', email='$email', password='$password2', level='$level' WHERE id='$id' AND password='$password'"); //untuk mengupdate data
-            if ($update) { //logic munculkan alert
+            if ($update) { //logic munculkan alert ketika berhasil
                 echo "<script>alert('Data berhasil diubah');</script>";
                 echo "<script>location='dashboard.php?halaman=data'</script>";
             } else { //apabila edit data gagal
                 echo "<script>alert('Data gagal diubah nih');</script>";
             }
-        } else {
+        } else { //apabila password tidak sama dengan database
             echo "<script>alert('Password lama salah');</script>";
         }
     }

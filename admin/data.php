@@ -3,11 +3,11 @@
 <table class="table1">
     <thead>
         <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Username</th>
-            <th scope="col">Email</th>
-            <th scope="col">Level</th>
-            <th scope="col">Aksi</th>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Level</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -15,7 +15,7 @@
         <?php $ambil = $db->query("SELECT * FROM user"); ?>
         <?php while ($pecah = $ambil->fetch_assoc()) { ?>
             <tr>
-                <th><?php echo $id; ?></th>
+                <td><?php echo $id; ?></td>
                 <td><?php echo $pecah['username']; ?></td>
                 <td><?php echo $pecah['email']; ?></td>
                 <td><?php echo $pecah['level']; ?></td>

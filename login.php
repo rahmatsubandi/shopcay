@@ -17,9 +17,9 @@ if (isset($_POST['login'])) {
         $_SESSION['level'] = $row['level'];
 
         if ($row['level'] == "admin") {
-            echo "<script>alert('Hallo admin, $username!!');document.location.href='dashboard.php'</script>/n";
+            echo "<script>alert('Hallo admin, $username!!');document.location.href='admin/dashboard.php'</script>/n";
         } else if ($row['level'] == "user") {
-            echo "<script>alert('Hallo, Selamat Berbelanja yah $username!!');document.location.href='home-user.php'</script>/n";
+            echo "<script>alert('Hallo, Selamat Berbelanja yah $username!!');document.location.href='user/home-user.php'</script>/n";
         } elseif ($row['level'] == "") {
             echo "<script>alert('$username kamu belum di Verifikasi nih oleh ShopCay :) Tunggu yah..');document.location.href='login.php'</script>/n";
         }

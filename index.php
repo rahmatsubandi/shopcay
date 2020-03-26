@@ -54,42 +54,42 @@ session_start();
     <div id="produk" class="text-title-produk">Produk</div>
     <div class="deks">Beberapa style menarik yang wajib kamu miliki!</div><br>
     <div class="bagian-card">
-        <a class="card1" href="#">
+        <a class="card1">
             <img src="img/girl.jfif" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Ughtea</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
+        <a class="card1">
             <img src="img/ikwan.png" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Ikwhan</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
+        <a class="card1">
             <img src="img/boy.jpg" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Selebgram Pria</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
+        <a class="card1">
             <img src="img/selebgram.jfif" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Selebgram Wanita</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
+        <a class="card1">
             <img src="img/santai wanita.jpg" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Santai Wanita</b></h4>
                 <p>Banyak Pilihan Lainya</p>
             </div>
         </a>
-        <a class="card1" href="#">
+        <a class="card1">
             <img src="img/santai pria.jpg" width="230px" height="225px">
             <div class="deskripsi">
                 <h4><b>Style Santai Pria</b></h4>
@@ -106,12 +106,12 @@ session_start();
                 <img src="img/iconweb.png" alt=""> </div>
             <div class="footer_third">
                 <h1>Informasi</h1>
-                <a href="home-user.php">&copy; ShopyCay 2020.</a>
+                <a href="index.php">&copy; ShopyCay 2020.</a>
 
             </div>
             <div class="footer_third">
                 <h1>Kontak</h1>
-                <a href="#">+62 8778 8711 327</a>
+                <a>+62 8778 8711 327</a>
             </div>
             <div class="footer_third">
                 <h1>Alamat</h1>

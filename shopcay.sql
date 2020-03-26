@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2020 at 10:01 PM
+-- Generation Time: Mar 26, 2020 at 09:32 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.32
 
@@ -25,11 +25,74 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pembelian`
+--
+
+CREATE TABLE `pembelian` (
+  `id_pembelian` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `tanggal_pembelian` date NOT NULL,
+  `total_pembelian` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pembelian`
+--
+
+INSERT INTO `pembelian` (`id_pembelian`, `id`, `tanggal_pembelian`, `total_pembelian`) VALUES
+(1, 2, '2020-03-01', 150000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pembelian_produk`
+--
+
+CREATE TABLE `pembelian_produk` (
+  `id_pembelian_produk` int(11) NOT NULL,
+  `id_pembelian` int(11) NOT NULL,
+  `id_produk` int(11) NOT NULL,
+  `jumlah` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pembelian_produk`
+--
+
+INSERT INTO `pembelian_produk` (`id_pembelian_produk`, `id_pembelian`, `id_produk`, `jumlah`) VALUES
+(1, 1, 1, 1),
+(2, 1, 2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produk`
+--
+
+CREATE TABLE `produk` (
+  `id_produk` int(11) NOT NULL,
+  `nama_produk` varchar(100) NOT NULL,
+  `harga_produk` int(11) NOT NULL,
+  `berat` int(11) NOT NULL,
+  `foto_produk` varchar(100) NOT NULL,
+  `deskripsi_produk` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga_produk`, `berat`, `foto_produk`, `deskripsi_produk`) VALUES
+(1, 'Style Ughtea', 250000, 500, 'girl.jfif', '1Set');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
-  `id` int(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `username` char(25) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -41,11 +104,30 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `email`, `password`, `level`) VALUES
-(1, 'Rahmat Subandi', 'rhmtin12@gmail.com', '4124bc0a9335c27f086f24ba207a4912', 'admin');
+(1, 'Rahmat Subandi', 'rhmtin12@gmail.com', '4124bc0a9335c27f086f24ba207a4912', 'admin'),
+(2, 'kimun', 'wd@gmail.com', '25ed1bcb423b0b7200f485fc5ff71c8e', 'user');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `pembelian`
+--
+ALTER TABLE `pembelian`
+  ADD PRIMARY KEY (`id_pembelian`);
+
+--
+-- Indexes for table `pembelian_produk`
+--
+ALTER TABLE `pembelian_produk`
+  ADD PRIMARY KEY (`id_pembelian_produk`);
+
+--
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- Indexes for table `user`
@@ -58,10 +140,28 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `pembelian`
+--
+ALTER TABLE `pembelian`
+  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pembelian_produk`
+--
+ALTER TABLE `pembelian_produk`
+  MODIFY `id_pembelian_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

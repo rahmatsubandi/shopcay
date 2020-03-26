@@ -11,8 +11,8 @@ $db = mysqli_connect("localhost", "root", "", "shopcay");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="shortcut icon" href="img/dashboard.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="shortcut icon" href="../img/dashboard.png">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
@@ -45,6 +45,12 @@ $db = mysqli_connect("localhost", "root", "", "shopcay");
                         include 'hapus.php';
                     } elseif ($_GET['halaman'] == "edit") {
                         include 'edit.php';
+                    } elseif ($_GET['halaman'] == "editproduk") {
+                        include 'editproduk.php';
+                    } elseif ($_GET['halaman'] == "detail") {
+                        include 'detail.php';
+                    } elseif ($_GET['halaman'] == "tambahproduk") {
+                        include 'tambahproduk.php';
                     }
                 } else {
                     include 'homedashboard.php';
