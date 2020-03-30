@@ -51,6 +51,10 @@ $db = mysqli_connect("localhost", "root", "", "shopcay");
                         include 'detail.php';
                     } elseif ($_GET['halaman'] == "tambahproduk") {
                         include 'tambahproduk.php';
+                    } elseif ($_GET['halaman'] == "hapusproduk") {
+                        include 'hapusproduk.php';
+                    } elseif ($_GET['halaman'] == "editproduk.php") {
+                        include 'editproduk.php';
                     }
                 } else {
                     include 'homedashboard.php';

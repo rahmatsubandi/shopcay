@@ -1,5 +1,5 @@
 <h2>Detail Pembelian</h2>
-
+<br>
 <?php
 $ambil = $db->query("SELECT * FROM pembelian JOIN user ON pembelian.id=user.id WHERE pembelian.id_pembelian='$_GET[id]'");
 $detail = $ambil->fetch_assoc();

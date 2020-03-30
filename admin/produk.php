@@ -28,7 +28,7 @@
                 <td><?php echo $pecah['deskripsi_produk']; ?></td>
                 <td>
                     <a href="dashboard.php?halaman=editproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn-edit">Edit</a> &nbsp;
-                    <a href="" class="btn-hapus" onClick="return confirm('Yakin menghapus data?')">Hapus</a>
+                    <a href="dashboard.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn-hapus" onClick="return confirm('Yakin menghapus data?')">Hapus</a>
                 </td>
             </tr>
             <?php $id++; ?>

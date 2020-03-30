@@ -43,24 +43,24 @@ if (isset($_POST['edit'])) {
 <form method="post">
     <div class="form-edit">
         <input type="hidden" name="id" value="<?php echo $pecah['id'] ?>">
+        <label style="font-size: 15px">Username</label>
         <div class="textbox">
-            <label style="font-size: 15px">Username</label>
             <input type="username" name="username" placeholder="Username" value="<?php echo $pecah['username']; ?>">
         </div>
+        <label style="font-size: 15px">Email</label>
         <div class="textbox">
-            <label style="font-size: 15px">Email</label>
             <input type="email" name="email" method="post" placeholder="Email" value="<?php echo $pecah['email']; ?>">
         </div>
+        <label style="font-size: 15px">Password lama</label>
         <div class="textbox">
-            <label style="font-size: 15px">Password lama</label>
             <input type="password" name="password" placeholder="Password Lama">
         </div>
+        <label>Password Baru</label>
         <div class="textbox">
-            <label>Password Baru</label>
             <input type="password" name="password2" placeholder="Password Baru">
         </div>
+        <label style="font-size: 15px">Konfirmasi Password</label>
         <div class="textbox">
-            <label style="font-size: 15px">Konfirmasi Password</label>
             <input type="password" name="password3" placeholder="Konfirmasi Password">
         </div>
         <div class="textbox-button">
