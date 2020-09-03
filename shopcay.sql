@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2020 at 09:32 PM
+-- Generation Time: Apr 02, 2020 at 05:04 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.32
 
@@ -60,8 +60,8 @@ CREATE TABLE `pembelian_produk` (
 --
 
 INSERT INTO `pembelian_produk` (`id_pembelian_produk`, `id_pembelian`, `id_produk`, `jumlah`) VALUES
-(1, 1, 1, 1),
-(2, 1, 2, 2);
+(1, 1, 1, 2),
+(2, 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,8 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga_produk`, `berat`, `foto_produk`, `deskripsi_produk`) VALUES
-(1, 'Style Ughtea', 250000, 500, 'girl.jfif', '1Set');
+(1, 'Style Ikhwan', 150000, 500, 'ikwan.png', '1Set                                                                      '),
+(2, 'Style Ughtea', 20000, 500, 'girl.jfif', '1Set');
 
 -- --------------------------------------------------------
 
@@ -155,7 +156,7 @@ ALTER TABLE `pembelian_produk`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
