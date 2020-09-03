@@ -1,3 +1,4 @@
 ## Hello, I'm Rahmat Subandi
 
-About Me [here](https://rhmtin.com/)
+[About Me](https://rhmtin.com/)
+[linktree](https://linktr.ee/rahmatsubandi)
